@@ -1,0 +1,42 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    gap: 0;
+}
+
+.image {
+    aspect-ratio: 1.47;
+    width: 100vw;
+    padding: 0;
+}
+
+/* scrolling code -- review  */
+
+.y.mandatory-scroll-snapping {
+    scroll-snap-type: y mandatory;
+  }
+
+  /* defining scroll-snap alignment on children */
+div > div {
+    scroll-snap-align: center;
+  }
+  
+  /* defining scroll-snap stop on children */
+  .always-stop > div {
+    scroll-snap-stop: always;
+  }
+  
+  .always-stop-odd > div:nth-of-type(odd) {
+    scroll-snap-stop: always;
+  }
+  
+  .always-stop-even > div:nth-of-type(even) {
+    scroll-snap-stop: always;
+  }
+  
+  .normal-stop > div {
+    scroll-snap-stop: normal;
+  }
