@@ -1,3 +1,5 @@
+// All of the following code is so that the user is able to click on the images to start and pause the audio
+
 document.getElementById('image-1').addEventListener('click', function() {
     var audio = document.getElementById('audio');
     var audio2 = document.getElementById('audio1');
@@ -108,34 +110,16 @@ document.getElementById('image-7').addEventListener('click', function() {
     }
 });
 
+document.getElementById('image-8').addEventListener('click', function() {
+    var audio = document.getElementById('audio');
+    var audio2 = document.getElementById('audio1');
 
-
-// document.getElementById('image-5').addEventListener('click', function() {
-//     var audio = document.getElementById('audio1');
-//     var audio2 = document.getElementById('audio1');
-//     if (audio.paused) {
-//         audio.play();
-//     } else {
-//         audio.pause();
-//     }
-// });
-
-// document.getElementById('image-6').addEventListener('click', function() {
-//     var audio = document.getElementById('audio2');
-//     var audio2 = document.getElementById('audio2');
-//     if (audio.paused) {
-//         audio.play();
-//     } else {
-//         audio.pause();
-//     }
-// });
-
-// document.getElementById('image-7').addEventListener('click', function() {
-//     var audio = document.getElementById('audio3');
-//     var audio2 = document.getElementById('audio3');
-//     if (audio.paused) {
-//         audio.play();
-//     } else {
-//         audio.pause();
-//     }
-// });
+    if (audio.paused) {
+        if(!audio2.paused){
+            audio2.pause();
+        }
+        audio.play();
+    } else {
+        audio.pause();
+    }
+});
